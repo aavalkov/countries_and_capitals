@@ -1,0 +1,13 @@
+<h2>{{capital.countryName}}</h2>
+<p>Population of Country: {{}}</p>
+<p>Area: {{}} square km</p>
+<p>Capital: {{capital.adminName1}}</p>
+<p>Population of Capital: {{capital.population}}</p>
+<p>3 Neightbors: {{}}</p>
+
+<img ng-src="http://www.geonames.org/flags/x/{{capital.countryCode | lowercase}}.gif" />
+
+<img id='myImage' src="http://www.geonames.org/img/country/250/{{capital.countryCode | uppercase}}.png" />
+
+<a href="/" class="btn btn-default">Home</a>
+<a href="/#/countries" class="btn btn-default">Browse Countries</a>
