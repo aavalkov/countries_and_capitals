@@ -9,7 +9,10 @@ angular.module('countriesApp', ['ngRoute'])
 		}).when("/countries/:country/capital", {
 		    templateUrl : "./country/country.html",
 		    controller : 'CountryCtrl'
-		})
+		}).when('/error', {
+		    template : '<p>Error - Page Not Found</p>',
+		    controller: 'HomeCtrl'
+		}).otherwise('/error');
 	})
 	.run(function($rootScope, $location, $timeout){
 		$rootScope.$on('$routeChangeError', function() {
