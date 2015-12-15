@@ -4,9 +4,10 @@ angular.module('countriesApp')
 			return $http.get('http://api.geonames.org/countryInfoJSON?username=aavalkov');
 		}
 	})
-	.controller('CountriesCtrl', ['$scope','getCountries','$location', function($scope, getCountries, $location){
+
+	.controller('CountriesCtrl', ['$rootScope','$scope','getCountries','$location', function($rootScope, $scope, getCountries, $location){
 		getCountries().then(function(response) {
-			console.log(response);
+			$rootScope.isLoading = false;
             $scope.countries = response.data.geonames;
         });
 
@@ -15,3 +16,5 @@ angular.module('countriesApp')
         }
 
 	}]);
+
+

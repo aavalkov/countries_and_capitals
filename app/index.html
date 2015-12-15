@@ -2,9 +2,10 @@
 <html ng-app="countriesApp">
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Countiries and Capitals</title>
 </head>
-<body>
+<body ng-class="{loading: isLoading}">
 	<div class="container">
 		<h1 id="main-title">Countries & Capitals</h1>
 		<div ng-view></div>
@@ -16,13 +17,9 @@
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
 	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="home/home.js"></script>
 	<script type="text/javascript" src="countries/countries.js"></script>
 	<script type="text/javascript" src="country/country.js"></script>
 </body>
 </html>
 
-<!-- main
-app.js
-directives
-the factories/services
-then controllers -->

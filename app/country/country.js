@@ -14,12 +14,13 @@ angular.module('countriesApp')
 			return $http.get('http://api.geonames.org/neighbours?country='+$route.current.params.country+'&type=JSON&username=aavalkov');
 		}
 	})
-	.controller('CountryCtrl', ['$scope','$route','getCountry', 'getCapital', 'getNeighbors', '$location', function($scope, $route, getCountry, getCapital, getNeighbors, $location){
+	.controller('CountryCtrl', ['$rootScope','$scope','$route','getCountry', 'getCapital', 'getNeighbors', '$location', function($rootScope, $scope, $route, getCountry, getCapital, getNeighbors, $location){
 		getCountry().then(function(response){
 			$scope.country = response.data.geonames[0];
 			var capital = $scope.country.capital;
 
 			getCapital(capital).then(function(response) {
+				$rootScope.isLoading = false;
 	            $scope.capital = response.data.geonames[0];
 	        });
 		});
