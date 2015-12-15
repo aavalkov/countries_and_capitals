@@ -13,3 +13,32 @@
   background:rgba(255,255,255,0.9) no-repeat center center;  
   background-image: url('../images/ajax-loader.gif');
 }
+h1 {
+  text-align: center;
+}
+.btn-container{
+  text-align: center;
+  margin-top: 25px;
+}
+.table-container {
+  height: 350px;
+  overflow: auto;
+}
+.country-imgs,
+#country-data {
+  text-align: center;
+}
+#flag {
+  width: 320px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.neighbors {
+  color: #489CDF;
+}
+.neighbors:hover{
+  cursor: pointer;
+}
+.neighbors:after {
+  content: ", ";
+}
